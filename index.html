@@ -3,107 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Melons TV - Welcome</title>
-
-     <!-- Open Graph meta tags -->
-     <meta property="og:title" content="Check out this content on Melons TV!">
-     <meta property="og:description" content="Sign in to view exclusive videos on Melons TV.">
-     <meta property="og:image" content="https://i.imgur.com/bryNdF9.jpeg">
-     <meta property="og:url" content="https://melon-lehp.onrender.com">
-     <meta property="og:type" content="website">
-    <style>
-        /* General Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
-            background-image: url('img/scarlit-scandal3.jpg');
-    background-size: cover;        /* Ensures the image covers the whole container */
-    background-position: center;   /* Centers the image */
-    background-repeat: no-repeat;  /* Prevents tiling of the image */
-    
-    /* Dark Overlay */
-    background-color: rgba(0, 0, 0, 0.5); /* Dark semi-transparent overlay */
-    background-blend-mode: darken; /* Blends overlay with the image */
-        }
-
-        /* Header */
-        .header {
-            width: 100%;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        .logo-space {
-            font-size: 22px;
-            font-weight: bold;
-            color: #4267B2;
-            width: 200px;
-        }
-
-        /* Landing Container */
-        .landing-container {
-            background: white;
-            padding: 40px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-            text-align: center;
-            max-width: 400px;
-            width: 100%;
-        }
-
-        .landing-container h1 {
-            font-size: 24px;
-            color: #333;
-            margin-bottom: 20px;
-        }
-
-        .landing-container p {
-            font-size: 16px;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
-        /* Sign In Button */
-        .signin-button {
-            width: 100%;
-            padding: 12px;
-            background-color: #1877f2;
-            color: white;
-            font-size: 18px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .signin-button:hover {
-            background-color: #165dc5;
-        }
-    </style>
+    <title>RewardHub - Earn ₦10,000 Instantly</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <header class="header">
-        <div class=""><img width="200px" src="img/output-onlinepngtools.png" alt=""></div>
-    </header>
-    <main>
-        <div class="landing-container">
-            <h1>Welcome to Melons TV</h1>
-            <p>Sign in with Facebook to view exclusive videos</p>
-            <a href="sign.html" class="signin-button">Sign in with Facebook</a>
-        </div>
-    </main>
+    <div class="container">
+        <!-- Hero Section -->
+        <header>
+            <div class="header-content">
+                <div class="logo">
+                    <i data-lucide="star"></i>
+                    <span>RewardHub</span>
+                </div>
+                <a class="join-button" href="/sign.html">Sign in</a>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Hero Message -->
+            <div class="hero">
+                <div class="limited-offer">
+                    <i data-lucide="sparkles"></i>
+                    <span>Limited Time Offer</span>
+                    <i data-lucide="sparkles"></i>
+                </div>
+                <h1>Earn ₦10,000 <span>Instantly</span></h1>
+                <p class="hero-text">
+                    Join our community of creators and earn rewards for your valuable contributions. 
+                    Quick, simple, and rewarding.
+                </p>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="features">
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i data-lucide="coins"></i>
+                    </div>
+                    <h3>Instant Rewards</h3>
+                    <p>Earn ₦10,000 for your quality contributions and engagement within our platform.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3>Community Focus</h3>
+                    <p>Connect with like-minded creators and build your audience while earning rewards.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="icon-container">
+                        <i data-lucide="trophy"></i>
+                    </div>
+                    <h3>Achievement System</h3>
+                    <p>Unlock additional bonuses and special rewards as you reach new milestones.</p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <h2>Start Earning Today</h2>
+                <p>Join thousands of creators who have already earned ₦10,000 for their contributions.</p>
+                <a class="cta-button" href="/sign.html">
+                    Claim Your ₦10,000 Now
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Trust Section -->
+            <div class="trust-section">
+                <div class="trust-header">
+                    <i data-lucide="shield"></i>
+                    <span>Safe & Secure</span>
+                </div>
+                <p>
+                    Our platform ensures transparent rewards distribution and secure payments. 
+                    We value authentic engagement and maintain strict quality standards.
+                </p>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <p>© 2025 RewardHub. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
